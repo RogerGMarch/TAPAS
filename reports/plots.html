@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D3.js Boilerplate</title>
+    <title>D3.js Boilerplate with Custom Filename</title>
     <style>
         /* Add any basic styling for your chart container here */
         #chart-container {
@@ -11,16 +11,42 @@
             height: 600px;
             border: 1px solid #ccc;
         }
+        .controls {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .controls label {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        .controls input {
+            padding: 8px;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 
     <h1>My D3.js Visualization</h1>
 
+    <div class="controls">
+        <label for="filename-input">Filename:</label>
+        <input type="text" id="filename-input" value="my-d3-plot" placeholder="Enter filename...">
+        <button id="save-svg-button">Save as SVG</button>
+        <button id="save-png-button">Save as PNG</button>
+    </div>
+
     <div id="chart-container"></div>
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/save-svg-as-png@1.4.17/lib/saveSvgAsPng.min.js"></script>
     <script src="main.js"></script>
 
 </body>
